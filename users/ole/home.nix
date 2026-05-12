@@ -10,7 +10,12 @@
 	programs.keepassxc.enable = true;
 
 	imports = [
+		./alacritty.nix
+		./fish.nix
 		./git.nix
+		./ssh.nix
+		./xdg.nix
+		./zed.nix
 	];
 
 	home.packages = with pkgs; [
