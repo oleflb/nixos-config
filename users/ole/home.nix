@@ -14,6 +14,7 @@
 		./fish.nix
 		./git.nix
 		./ssh.nix
+		./uv.nix
 		./xdg.nix
 		./zed.nix
 	];
