@@ -13,6 +13,7 @@
 		./alacritty.nix
 		./fish.nix
 		./git.nix
+		./messengers.nix
 		./starship.nix
 		./ssh.nix
 		./uv.nix
