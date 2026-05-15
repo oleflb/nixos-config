@@ -13,10 +13,12 @@
 		./alacritty.nix
 		./fish.nix
 		./git.nix
+		./starship.nix
 		./ssh.nix
 		./uv.nix
 		./xdg.nix
 		./zed.nix
+		./zoxide.nix
 	];
 
 	home.packages = with pkgs; [

@@ -4,7 +4,7 @@
 
 { config, lib, pkgs, ... }:
 
-{  
+{
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Unfree is required for steam
@@ -69,6 +69,10 @@
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
+  programs.nix-ld.enable = true;
+
+  environment.etc."ssl/cert.pem".source = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
+
   environment.systemPackages = with pkgs; [
     pciutils
     btop
@@ -78,7 +82,7 @@
   environment.shellAliases = {
     rebuild-system = "nixos-rebuild switch --flake /etc/nixos.#desktop";
   };
-  
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -123,4 +127,3 @@
   system.stateVersion = "25.11"; # Did you read the comment?
 
 }
-
