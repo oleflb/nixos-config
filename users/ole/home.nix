@@ -14,7 +14,7 @@
 		./alacritty.nix
 		./fish.nix
 		./git.nix
-		./messengers.nix
+		./packages.nix
 		./rustic.nix
 		./starship.nix
 		./ssh.nix
