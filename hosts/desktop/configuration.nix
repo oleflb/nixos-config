@@ -77,7 +77,6 @@
   environment.etc."ssl/cert.pem".source = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
   environment.systemPackages = with pkgs; [
     pciutils
-    btop
     git
   ];
 

@@ -23,7 +23,9 @@
 				./modules/desktop/cosmic.nix
 				./modules/desktop/helix.nix
 				./modules/desktop/lemurs.nix
+				./modules/desktop/monitor.nix
 				./modules/desktop/steam.nix
+				./modules/desktop/podman.nix
 
 				# Users
 				./users/ole/user.nix
