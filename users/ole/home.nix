@@ -10,10 +10,12 @@
 	programs.keepassxc.enable = true;
 
 	imports = [
+	  ./agenix.nix
 		./alacritty.nix
 		./fish.nix
 		./git.nix
 		./messengers.nix
+		./rustic.nix
 		./starship.nix
 		./ssh.nix
 		./uv.nix
@@ -24,6 +26,7 @@
 
 	home.packages = with pkgs; [
 		nextcloud-client
+		dust
 	];
 
 	services.nextcloud-client = {

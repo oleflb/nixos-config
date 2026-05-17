@@ -5,6 +5,8 @@
 { config, lib, pkgs, ... }:
 
 {
+  time.timeZone = "Europe/Berlin";
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Unfree is required for steam
@@ -70,9 +72,9 @@
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   programs.nix-ld.enable = true;
+  programs.fuse.userAllowOther = true;
 
   environment.etc."ssl/cert.pem".source = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
-
   environment.systemPackages = with pkgs; [
     pciutils
     btop

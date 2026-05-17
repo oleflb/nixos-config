@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   programs.fish = {
@@ -22,9 +22,14 @@
       }
     ];
 
-
     shellAbbrs = {
       zed = "zeditor";
     };
+
+    shellInit = ''
+      if test -f ${config.age.secrets.rustic_repo.path}
+          set -gx RUSTIC_REPOSITORY (cat ${config.age.secrets.rustic_repo.path})
+      end
+    '';
   };
 }
