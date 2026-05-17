@@ -1,6 +1,12 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
+  # Fix for the Gigabyte firmware
+  boot.kernelParams = [
+    "acpi_osi=\"!Windows 2015\""
+    "acpi_os_name=\"Microsoft Windows\""
+  ];
+
   imports = [
     ./hardware-configuration.nix
 
