@@ -53,9 +53,5 @@
     git
   ];
 
-  environment.shellAliases = {
-    rebuild-system = "nixos-rebuild switch --flake /etc/nixos.#desktop";
-  };
-
   system.stateVersion = "25.11";
 }
