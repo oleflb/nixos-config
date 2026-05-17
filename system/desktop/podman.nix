@@ -1,7 +1,10 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    podman
-  ];
+  virtualisation.containers.enable = true;
+
+  virtualisation.podman = {
+    enable = true;
+    defaultNetwork.settings.dns_enabled = true;
+  };
 }
